@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form and ID Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="./resume.png">
+</head>
+<body>
+    <div class="container">
+        <!-- ID Card Section -->
+        <div class="cont" id="idCard">
+            <div class="up">
+                <img src="./x1.png" alt="Logo" id="logoImage">
+            </div>
+            <div class="low">
+                <div id="cardContent">
+                    <!-- Appended Data -->
+                </div>
+                <div class="logo">
+                    <div class="social" id="socialLinks">
+                        <!-- Social media links will be added here -->
+                    </div>
+                </div>
+                <div class="btn">
+                    <button class="btnt" id="downloadBtn">Download</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="r-container">
+            <form id="resumeForm">
+                <div class="input-group">
+                    <label for="logoURL">Logo Image URL:</label>
+                    <input type="text" id="logoURL" placeholder="Logo Image URL">
+                </div>
+                <div class="input-group">
+                    <label for="logoFile">Upload Logo Image:</label>
+                    <input type="file" id="logoFile" accept="image/*">
+                </div>
+                <input type="text" id="jobPost" placeholder="Job Post" required>
+                <input type="text" id="section" placeholder="Section" required>
+                <input type="text" id="skills" placeholder="Skills" required>
+                <input type="text" id="description" placeholder="Description" required>
+                <input type="email" id="email" placeholder="Email" required>
+
+                <div class="input-image">
+                    <label>
+                        <input class="resume-image-hidden" type="checkbox" id="resumeImage1">
+                        <input type="text" id="socialLink1" placeholder="Social Media Link 1">
+                        <img class="resume-image" src="./1.png" alt="Image 1">
+                    </label>
+                    <label>
+                        <input class="resume-image-hidden" type="checkbox" id="resumeImage2">
+                        <input type="text" id="socialLink2" placeholder="Social Media Link 2">
+                        <img class="resume-image" src="./2.png" alt="Image 2">
+                    </label>
+                    <label>
+                        <input class="resume-image-hidden" type="checkbox" id="resumeImage3">
+                        <input type="text" id="socialLink3" placeholder="Social Media Link 3">
+                        <img class="resume-image" src="./3.png" alt="Image 3">
+                    </label>
+                    <label>
+                        <input class="resume-image-hidden" type="checkbox" id="resumeImage4">
+                        <input type="text" id="socialLink4" placeholder="Social Media Link 4">
+                        <img class="resume-image" src="./4.png" alt="Image 4">
+                    </label>
+                    <label>
+                        <input class="resume-image-hidden" type="checkbox" id="resumeImage5">
+                        <input type="text" id="socialLink5" placeholder="Social Media Link 5">
+                        <img class="resume-image" src="./5.png" alt="Image 5">
+                    </label>
+                    <label>
+                        <input class="resume-image-hidden" type="checkbox" id="resumeImage5">
+                        <input type="text" id="socialLink6" placeholder="Social Media Link 6">
+                        <img class="resume-image" src="./6.png" alt="Image 6">
+                    </label>
+                </div>
+
+                <div class="btn">
+                    <button class="btnt" type="button" id="updateCardBtn">Update Card</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
