@@ -292,6 +292,57 @@ body {
     </div>
 
     <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const logoURLInput = document.getElementById('logoURL');
+    const logoFileInput = document.getElementById('logoFile');
+    const logoImage = document.getElementById('logoImage');
+    const updateCardBtn = document.getElementById('updateCardBtn');
+
+    updateCardBtn.addEventListener('click', () => {
+        const logoURL = logoURLInput.value;
+
+        if (logoURL) {
+            fetch(logoURL)
+                .then(response => {
+                    if (response.ok) {
+                        logoImage.src = logoURL;
+                    } else {
+                        alert('Image URL is not valid or not accessible.');
+                    }
+                })
+                .catch(error => {
+                    alert('Error fetching the image from URL.');
+                    console.error('Error:', error);
+                });
+        } else if (logoFileInput.files.length > 0) {
+            const file = logoFileInput.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                logoImage.src = e.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        } else {
+            alert('Please provide a valid image URL or upload a file.');
+        }
+    });
+
+    const downloadBtn = document.getElementById('downloadBtn');
+    downloadBtn.addEventListener('click', () => {
+        const card = document.getElementById('idCard');
+        html2canvas(card).then(canvas => {
+            const imgData = canvas.toDataURL('image/png');
+            const pdf = new jspdf.jsPDF();
+            pdf.addImage(imgData, 'PNG', 0, 0);
+            pdf.save('download.pdf');
+        });
+    });
+});
+
+
+
+        // *************************
         document.getElementById('updateCardBtn').addEventListener('click', function () {
     updateIDCard();
 });
