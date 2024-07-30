@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Styled Form and ID Card</title>
-    <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <link rel="stylesheet" href="./resume.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.6.0/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <div class="center-content">
+        <h1>Mini Resume Maker</h1>
+        <li>If not work <a href="./Another.html">click here</a></li>
+    </div>
     <div class="container">
-        <!-- ID Card Section -->
         <div class="cont" id="idCard">
             <div class="up">
                 <img src="./x1.png" alt="Logo" id="logoImage">
@@ -30,7 +33,6 @@
             </div>
         </div>
 
-        <!-- Form Section -->
         <div class="r-container">
             <form id="resumeForm">
                 <div class="input-group">
@@ -51,32 +53,32 @@
                     <label>
                         <input class="resume-image-hidden" type="checkbox" id="resumeImage1">
                         <input type="text" id="socialLink1" placeholder="Social Media Link 1">
-                        <img class="resume-image" src="./1.png" alt="Image 1">
+                        <img class="resume-image" src="img/1.png" alt="Image 1">
                     </label>
                     <label>
                         <input class="resume-image-hidden" type="checkbox" id="resumeImage2">
                         <input type="text" id="socialLink2" placeholder="Social Media Link 2">
-                        <img class="resume-image" src="./2.png" alt="Image 2">
+                        <img class="resume-image" src="img/2.png" alt="Image 2">
                     </label>
                     <label>
                         <input class="resume-image-hidden" type="checkbox" id="resumeImage3">
                         <input type="text" id="socialLink3" placeholder="Social Media Link 3">
-                        <img class="resume-image" src="./3.png" alt="Image 3">
+                        <img class="resume-image" src="img/3.png" alt="Image 3">
                     </label>
                     <label>
                         <input class="resume-image-hidden" type="checkbox" id="resumeImage4">
                         <input type="text" id="socialLink4" placeholder="Social Media Link 4">
-                        <img class="resume-image" src="./4.png" alt="Image 4">
+                        <img class="resume-image" src="img/4.png" alt="Image 4">
                     </label>
                     <label>
                         <input class="resume-image-hidden" type="checkbox" id="resumeImage5">
                         <input type="text" id="socialLink5" placeholder="Social Media Link 5">
-                        <img class="resume-image" src="./5.png" alt="Image 5">
+                        <img class="resume-image" src="img/5.png" alt="Image 5">
                     </label>
                     <label>
-                        <input class="resume-image-hidden" type="checkbox" id="resumeImage5">
+                        <input class="resume-image-hidden" type="checkbox" id="resumeImage6">
                         <input type="text" id="socialLink6" placeholder="Social Media Link 6">
-                        <img class="resume-image" src="./6.png" alt="Image 6">
+                        <img class="resume-image" src="img/6.png" alt="Image 6">
                     </label>
                 </div>
 
@@ -86,8 +88,8 @@
             </form>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-
-    <script src="scripts.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
